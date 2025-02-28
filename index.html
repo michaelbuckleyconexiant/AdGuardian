@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad Workflow Platform</title>
+
+<!-- Primary CSS -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/styles.css">
+<!-- Icons for UI elements -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- header : START -->
+
+<header>
+  <div class="container header-main">
+    <div> 
+      <!-- Hamburger Button -->
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="sidebar" id="sidebar"> <span class="close-btn" onclick="toggleMenu()">×</span> 
+		  
+		   <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"><i class="fa-solid fa-user"></i></div>
+          <div class="sidebar-item-text">Welcome: [User Name]</div>
+        </div>
+        </a> 
+
+		  
+		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"><i class="fa-solid fa-house"></i></div>
+          <div class="sidebar-item-text">Home</div>
+        </div>
+        </a> 
+		  
+		  
+		  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-square-check"></i></div>
+          <div class="sidebar-item-text">Conexiant Approval Dashboard</div>
+        </div>
+        </a> 
+		  
+		  
+		  	  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-square-check"></i></div>
+          <div class="sidebar-item-text">[Company Name] Approval Dashboard</div>
+        </div>
+        </a> 
+		  
+		  
+		  
+		  		  	  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-users-viewfinder"></i></div>
+          <div class="sidebar-item-text">Manage Agency Users</div>
+        </div>
+        </a> 
+		  
+		  
+		  		  		  	  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-envelope"></i></div>
+          <div class="sidebar-item-text">Manage Emails</div>
+        </div>
+        </a> 
+		  
+		  
+		  		  
+		  		  		  	  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-users"></i></div>
+          <div class="sidebar-item-text">Manage Backend Users</div>
+        </div>
+        </a> 
+		  
+		  
+		  		  
+		  		  		  	  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-circle-info"></i></div>
+          <div class="sidebar-item-text">About AdGuardian</div>
+        </div>
+        </a> 
+		  
+		  
+		  		  		  		  	  		  <a href="#">
+        <div class="sidebar-item">
+          <div class="sidebar-item-icon"> <i class="fa-solid fa-envelope"></i></div>
+          <div class="sidebar-item-text">Contact US</div>
+        </div>
+        </a> 
+		  
+		  
+		  
+ </div>
+      <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    </div>
+    
+    <!-- Company Logo -->
+    <div class="header-logo"><img src="img/company-logo.jpg"></div>
+    
+    <!-- Login Button-->
+    <div>
+      <button onclick="myFunction()" class="primary-btn dropbtn">Login <i class="fa-solid fa-chevron-down"></i></button>
+      <div id="myDropdown" class="dropdown-content"> <a href="#home">Vendor</a> <a href="#about">Conexiant</a> <a href="#contact">Client</a> </div>
+    </div>
+  </div>
+</header>
+
+<!-- header : END --> 
+
+<!-- full-width contnet : START  -->
+
+<div class="fluid-container">
+  <div class="container">
+    <div class="row">
+      <div class="home-hero">
+        <h1>Advertising Asset Submission Form</h1>
+        <p>This system will allow you to submit new advertising campaign assets for review and approval.</p>
+        <p>Prior to submitting an asset, please be sure to review the [Company Name] Advertising Standards and make sure your campaign meets all of the requirements. If provided assets do not meet these guidelines, approval times will be significantly impacted.</p>
+        <p>View the [Company Name] Advertising Standards</p>
+        <p>To begin, please provide your email address below. Please note that only email addresses that have been approved by Conexiant will allow you proceed to submit campaign assets to the system. If you require any assistance accessing the system, please contact adaloginhelp@hbside.com.</p>
+        <form class="mt-5 mb-5 align-center">
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          <p class="align-center">
+            <button class="primary-btn btn-color-2 mt-3" type="submit">Subscribe</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- full-width contnet : END  --> 
+
+<!-- footer: START -->
+
+<footer>
+  <div class="container">
+    <div class="row footer-main">
+      <div class="footer-logo"><img src="img/conexiant-logo.svg"></div>
+      <div class="footer-copyright">&copy; Copyright © 2025 Conexiant unless otherwise noted. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- footer: END --> 
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if clicking outside both the button and dropdown
+window.onclick = function(event) {
+  if (!event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+};
+
+	
+</script> 
+<script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
