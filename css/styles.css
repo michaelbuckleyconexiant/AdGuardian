@@ -692,35 +692,44 @@ textarea {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
 }
-.ad-review-dashboard-grid-item {
-  background-color: var(--gray-tint-92);
-  padding: 1rem 1rem;
-  margin-bottom: 2rem;
-  font-size: .85rem;
-  height: auto;
+.ad-review-dashboard-column {
   border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
 }
-.ad-review-dashboard-grid-item span {
+.ad-review-dashboard-grid-item__short {
+  height: auto;
+}
+.ad-review-dashboard-grid-item__short span {
   color: var(--gray-tint-60);
 }
 .ad-review-dashboard-grid-item__full {
-  min-height: 400px;
-  background-color: red;
-  height: 100%;
+  min-height: 200px;
+  flex-grow: 1;
+  display: grid;
+  align-items: stretch; 
+  text-align: center;
+  justify-content: center;
+}
+.ad-review-dashboard-grid-item__style {
+  background-color: var(--gray-tint-92);
+  border-radius: var(--border-radius-md);
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  font-size: .85rem;
 }
 .ad-review-card {
   background-color: white;
   padding: 1rem;
-  width: 100%;
-  display: grid;
+  width: auto;
   border-radius: var(--border-radius-md);
   box-shadow: 0px 8px 16px 0px var(--gray-tint-90);
   margin-bottom: 1rem;
 }
 .ad-review-card:last-child {
   margin-bottom: 0;
-
 }
 
 .ad-review-card button {
@@ -739,6 +748,10 @@ textarea {
 }
 
 .accordion-item {
+  border-bottom: solid 1px var(--gray-tint-80);
+}
+.accordion-item:last-child {
+  border-bottom: none;
 }
 
 .accordion-header {
