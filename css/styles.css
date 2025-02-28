@@ -23,11 +23,18 @@ html {
   --body-font: "Poppins", sans-serif;
   --outer-padding: 3rem;
   --dark-color-rgb: 34, 45, 51;
+  --gray-tint-gray: hsl(210, 20%, 17%); /* Original color */
+  --gray-tint-gray-30: hsl(210, 20%, 30%); /* Slightly lighter */
+  --gray-tint-gray-45: hsl(210, 20%, 45%); /* Medium tint */
+  --gray-tint-gray-60: hsl(210, 20%, 60%); /* Lighter tint */
+  --gray-tint-gray-75: hsl(210, 20%, 75%); /* Very light tint */
+  --gray-tint-gray-90: hsl(210, 20%, 90%); /* Almost white */
   --primary-color-1: #1B75BC;
   --primary-color-2: #A6CE3C;
   --light-gray-1: rgba(0, 0, 0, 0.05);
   --light-gray-2: rgba(0, 0, 0, 0.20);
   --light-gray-3: rgba(0, 0, 0, 0.30);
+  --border-radius-md: .5rem;
 }
 
 @media (max-width: 900px) {
@@ -156,6 +163,7 @@ hr {
 }
 
 /* ======= Header ======= */
+
 header {
   width: 100%;
   background-color: #ffffff;
@@ -472,11 +480,16 @@ footer {
   border: none;
   cursor: pointer;
   line-height: 1;
-  border-radius: 6px;
+  border-radius: var(--border-radius-md);
 }
 
 .btn-color-2 {
   background-color: var(--primary-color-2);
+  color: rgba(var(--dark-color-rgb));
+}
+
+.btn-color-light {
+  background-color: rgba(var(--dark-color-rgb), 0.1);
   color: rgba(var(--dark-color-rgb));
 }
 
@@ -500,14 +513,14 @@ footer {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  /* Moves it slightly up */
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: white;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out, visibility 250ms ease-in-out;
+  border-radius: var(--border-radius-md);
 }
 
 .dropdown-content.show {
@@ -519,7 +532,6 @@ footer {
 
 /* ======= Hero Home Page ======= */
 .home-hero {
-  padding: 4rem 0;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -539,6 +551,29 @@ label {
   font-weight: bold;
   color: #333;
 }
+
+/* ======= Global Select Styles ======= */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: #fff;
+  cursor: pointer;
+  padding-right: 40px;
+  /* Space for the Font Awesome arrow */
+  position: relative;
+}
+
+/* Style select when focused */
+select:focus {
+  border-color: #666;
+}
+
+
 
 /* ======= Global Input Fields ======= */
 input[type="email"],
@@ -564,7 +599,7 @@ textarea {
   top: 0;
   left: -430px;
   transition: left 0.3s ease;
-  padding-top: 60px;
+  padding-top: 4rem;
   color: white;
   z-index: 2;
 }
@@ -579,7 +614,7 @@ textarea {
   display: block;
   color: white;
   text-decoration: none;
-  padding: 15px;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #444;
   transition: all 250ms;
 }
@@ -635,6 +670,39 @@ textarea {
 .sidebar-item-icon {}
 
 .sidebar-item-text {}
+
+
+/* ======= Review Grid ======= */
+
+.ad-review-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
+}
+
+.ad-review-dashboard-column {}
+
+
+.ad-review-dashboard-grid-item {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: .75rem;
+}
+
+.ad-review-dashboard-grid-item span {
+  color: var(--gray-tint-gray-60);
+}
+
+.ad-review-dashboard-grid-item__full {}
+
+
+
+
+
+
 
 /* THE END */
 /* THE END */
