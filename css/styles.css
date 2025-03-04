@@ -199,6 +199,8 @@ td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   color: #444;
+  max-width: 300px;
+  min-width: 200px;
 }
 
 /* Zebra Striping */
@@ -216,7 +218,7 @@ tr:hover {
   table {
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
 }
 
@@ -553,7 +555,6 @@ footer {
 
 .primary-btn:hover {
   background-color: color-mix(in srgb, var(--primary-color-1) 80%, black 20%);
-  color: white;
   color: white;
 }
 
