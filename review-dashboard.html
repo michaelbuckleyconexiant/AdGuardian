@@ -15,6 +15,8 @@
 </head>
 
 <body>
+  
+  
   <!-- header : START -->
 
   <header>
@@ -30,32 +32,42 @@
               <div class="sidebar-item-text">Welcome: [User Name]</div>
             </div>
           </a>
-          <a href="#">
+
+
+          <a href="index.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"><i class="fa-solid fa-house"></i></div>
               <div class="sidebar-item-text">Home</div>
             </div>
           </a>
-          <a href="#">
+
+
+          <a href="review-dashboard.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-square-check"></i></div>
               <div class="sidebar-item-text">Conexiant Approval Dashboard</div>
             </div>
           </a>
-          <a href="#">
+
+
+          <a href="review-dashboard.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-square-check"></i></div>
               <div class="sidebar-item-text">[Company Name] Approval Dashboard</div>
             </div>
           </a>
-          <a href="#">
+
+
+
+          <a href="manage-agency-users.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-users-viewfinder"></i></div>
               <div class="sidebar-item-text">Manage Agency Users</div>
             </div>
           </a>
 
-          <a href="#">
+
+          <a href="manage-emails.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-envelope"></i></div>
               <div class="sidebar-item-text">Manage Emails</div>
@@ -64,7 +76,7 @@
 
 
 
-          <a href="#">
+          <a href="manage-backend-users.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-users"></i></div>
               <div class="sidebar-item-text">Manage Backend Users</div>
@@ -73,7 +85,7 @@
 
 
 
-          <a href="#">
+          <a href="about-adguardian.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-circle-info"></i></div>
               <div class="sidebar-item-text">About AdGuardian</div>
@@ -81,7 +93,7 @@
           </a>
 
 
-          <a href="#">
+          <a href="contact.html">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-paper-plane"></i></div>
               <div class="sidebar-item-text">Contact US</div>
@@ -108,6 +120,7 @@
   </header>
 
   <!-- header : END -->
+
 
   <!-- full-width contnet : START  -->
 
@@ -545,67 +558,11 @@
 
   <!-- footer: END -->
 
-  <!-- login menu js -->
+  <!-- javascript docs -->
 
-  <script>
-
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if clicking outside both the button and dropdown
-    window.onclick = function (event) {
-      if (!event.target.closest('.dropbtn') && !event.target.closest('.dropdown-content')) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    };
-
-
-  </script>
-
-  <!-- sidebar menu js -->
-
-  <script>
-    function toggleMenu() {
-      const sidebar = document.getElementById('sidebar');
-      const overlay = document.getElementById('overlay');
-
-      sidebar.classList.toggle('active');
-      overlay.classList.toggle('active');
-    }
-  </script>
-
-  <!-- accordian js -->
-  <script>
-    document.querySelectorAll('.accordion-header').forEach(button => {
-      let content = button.nextElementSibling;
-      let icon = button.querySelector("i");
-
-      // Open all sections by default
-      button.classList.add('active');
-      content.style.maxHeight = content.scrollHeight + "px";
-      content.classList.add('open');
-
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
-
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-          content.classList.remove('open');
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.classList.add('open');
-        }
-      });
-    });
-
-  </script>
+  <script src="js/accordian.js"></script> 
+  <script src="js/sidebar.js"></script> 
+  <script src="js/login-menu.js"></script> 
 
 </body>
 
