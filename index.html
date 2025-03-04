@@ -24,7 +24,7 @@
         <button class="hamburger" onclick="toggleMenu()">☰</button>
         <div class="sidebar" id="sidebar"> <span class="close-btn" onclick="toggleMenu()">×</span>
 
-          <a href="#">
+          <a style="pointer-events: none;">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"><i class="fa-solid fa-user"></i></div>
               <div class="sidebar-item-text">Welcome: [User Name]</div>
@@ -108,7 +108,7 @@
       <div class="header-logo"><img src="img/company-logo.jpg"></div>
 
       <!-- Login Button-->
-      <div>
+      <div class="dropdown">
         <button onclick="myFunction()" class="primary-btn btn-color-dark dropbtn">Login&nbsp;&nbsp;<i
             class="fa-solid fa-user"></i></button>
         <div id="myDropdown" class="dropdown-content"> <a href="#home">Vendor</a> <a href="#about">Conexiant</a> <a
