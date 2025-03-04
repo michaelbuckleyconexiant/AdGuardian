@@ -30,40 +30,30 @@
               <div class="sidebar-item-text">Welcome: [User Name]</div>
             </div>
           </a>
-
-
-          <a href="index.html">
+          <a href="#">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"><i class="fa-solid fa-house"></i></div>
               <div class="sidebar-item-text">Home</div>
             </div>
           </a>
-
-
-          <a href="review-dashboard.html">
+          <a href="#">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-square-check"></i></div>
               <div class="sidebar-item-text">Conexiant Approval Dashboard</div>
             </div>
           </a>
-
-
-          <a href="review-dashboard.html">
+          <a href="#">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-square-check"></i></div>
               <div class="sidebar-item-text">[Company Name] Approval Dashboard</div>
             </div>
           </a>
-
-
-
           <a href="#">
             <div class="sidebar-item">
               <div class="sidebar-item-icon"> <i class="fa-solid fa-users-viewfinder"></i></div>
               <div class="sidebar-item-text">Manage Agency Users</div>
             </div>
           </a>
-
 
           <a href="#">
             <div class="sidebar-item">
@@ -119,53 +109,64 @@
 
   <!-- header : END -->
 
-
   <!-- full-width contnet : START  -->
 
-  <div class="fluid-container bg-radial-color-gradients pt-5 pb-5">
+  <div class="fluid-container">
     <div class="container">
-      <div class="home-hero">
-        <div class="row">
-
-          <h1 class="text-align-center">Advertising Asset Submission Form</h1>
-
-          <p style="text-wrap: balance;" class="text-align-center mb-4">Submit new advertising campaign assets for
-            review and approval while ensuring compliance with our guidelines.</p>
+      <div class="row mt-5">
+        
+<h1>Manage Agency Users</h1>
 
 
+<button class="primary-btn mb-5"><i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add Approved User</button>
 
-          <div class="card-home-hero text-align-center">
+<table class="mb-5">
+  <tbody>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Smith</td>
+      <td>john.smith@rmail.com</td>
+      <td><button class="primary-btn btn-sm">Update</td>
+        <td><button class="primary-btn btn-color-red btn-sm">Delete</td>
+        </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
 
-            <p>Before submitting, review the <a href="#" target="_blank">[Company Name]</a> Advertising Standards to
-              ensure your campaign meets all requirements. If assets do not meet guidelines, approval times may be
-              delayed.</p>
-
-            <p class="text-align-center">Enter your approved email address</p>
-
-
-            <form class="mt-2 mb-2 text text-align-center align-center">
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-              <p>
-                <button class="primary-btn mt-3" type="submit">Continue</button>
-              </p>
-
-            </form>
-            <small>Only Conexiant-approved email addresses can proceed.<br>
-              Need help? Contact <a href="#">adaloginhelp@hbside.com</a></small>
-
-          </div>
 
 
 
-
-        </div>
 
 
       </div>
-
-
     </div>
-
   </div>
 
   <!-- full-width contnet : END  -->
@@ -183,6 +184,8 @@
   </footer>
 
   <!-- footer: END -->
+
+  <!-- login menu js -->
 
   <script>
 
@@ -205,6 +208,9 @@
 
 
   </script>
+
+  <!-- sidebar menu js -->
+
   <script>
     function toggleMenu() {
       const sidebar = document.getElementById('sidebar');
@@ -214,6 +220,33 @@
       overlay.classList.toggle('active');
     }
   </script>
+
+  <!-- accordian js -->
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(button => {
+      let content = button.nextElementSibling;
+      let icon = button.querySelector("i");
+
+      // Open all sections by default
+      button.classList.add('active');
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.classList.add('open');
+
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          content.classList.remove('open');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.add('open');
+        }
+      });
+    });
+
+  </script>
+
 </body>
 
 </html>
