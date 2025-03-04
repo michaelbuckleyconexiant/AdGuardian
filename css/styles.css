@@ -7,9 +7,11 @@
   scroll-behavior: smooth;
   /* border: 1px solid red!important; */
 }
+
 html {
   font-size: 16px;
 }
+
 /* ======= Root Variables ======= */
 :root {
   --wrapper-width: 1400px;
@@ -44,7 +46,7 @@ html {
 }
 
 .bg-radial-color-gradients {
-  background: 
+  background:
     radial-gradient(circle at top left, rgba(var(--primary-color-rgb-1), 0.15), transparent 50%),
     radial-gradient(circle at bottom right, rgba(var(--primary-color-rgb-1), 0.15), transparent 50%);
   background-size: cover;
@@ -99,8 +101,8 @@ p,
 li {
   font-size: 1rem;
   margin-bottom: 1rem;
-  font-weight: 300;
 }
+
 small {
   font-size: 80%;
   color: var(--gray-dark-med);
@@ -109,7 +111,9 @@ small {
 
 
 /* ======= Links ======= */
-a, a:active, a:visited {
+a,
+a:active,
+a:visited {
   color: var(--primary-color-1);
   text-decoration: none;
   transition: all 250ms;
@@ -526,11 +530,11 @@ footer {
   padding-left: 4rem !important;
 }
 
-/* ======= Buttons + Doprdowns ======= */
+/* ======= Buttons ======= */
 
 
-.primary-btn, 
-.primary-btn:active, 
+.primary-btn,
+.primary-btn:active,
 .primary-btn:visited {
   background-color: var(--primary-color-1);
   color: white;
@@ -548,54 +552,46 @@ footer {
 }
 
 .primary-btn:hover {
-  background-color: var(--primary-color-1); /* Keep original color */
+  background-color: color-mix(in srgb, var(--primary-color-1) 80%, black 20%);
+  color: white;
   color: white;
 }
-
-/* Pseudo-element to apply the darkening effect */
-.primary-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0); /* Initially transparent */
-  transition: background 250ms ease;
-  z-index: -1; /* Keeps it behind text */
-}
-
-.primary-btn:hover::before {
-  background: rgba(0, 0, 0, 0.2); /* Dark overlay effect */
-}
-
 
 .btn-sm {
   padding: .65rem 1rem;
   font-size: .75rem;
 }
+
 .btn-color-2 {
   background-color: var(--primary-color-2);
   color: var(--gray-dark);
 }
-.btn-color-dark, .btn-color-dark:active, .btn-color-dark:visited {
+
+.btn-color-dark,
+.btn-color-dark:active,
+.btn-color-dark:visited {
   background-color: var(--gray-dark);
   color: white;
 }
+
 .btn-color-dark:hover {
   background-color: var(--gray-med);
   color: white;
 }
-.btn-color-light, .btn-color-light:active, .btn-color-light:visited {
+
+.btn-color-light,
+.btn-color-light:active,
+.btn-color-light:visited {
   background-color: var(--gray-light-3);
   color: var(--gray-dark);
 }
+
 .btn-color-light:hover {
-  background-color: var(--gray-light-1);
+  background-color: color-mix(in srgb, var(--gray-light-3) 90%, black 10%);
   color: var(--gray-dark);
 }
 
-.btn-color-red {
+.btn-color-red,.btn-color-red:active, .btn-color-red:visited {
   position: relative;
   background-color: crimson;
   color: white;
@@ -608,27 +604,11 @@ footer {
 }
 
 .btn-color-red:hover {
-  background-color: crimson; /* Keep the background crimson */
-  color: white !important; /* Ensure text color stays white */
+  background-color: color-mix(in srgb, crimson 80%, black 20%);
+  color: white;
 }
 
-/* Pseudo-element to add darkening effect */
-.btn-color-red::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0); /* Initially transparent */
-  transition: background 0.3s ease;
-  z-index: -1; /* Keeps it behind the text */
-}
-.btn-color-red:hover::before {
-  background: rgba(0, 0, 0, 0.2); /* Dark overlay */
-}
-
-.btn-color-green {
+.btn-color-green, .btn-color-green:active, .btn-color-green:visited {
   position: relative;
   background-color: forestgreen;
   color: white;
@@ -641,25 +621,8 @@ footer {
 }
 
 .btn-color-green:hover {
-  background-color: forestgreen; /* Keep the background crimson */
-  color: white !important; /* Ensure text color stays white */
-}
-
-/* Pseudo-element to add darkening effect */
-.btn-color-green::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0); /* Initially transparent */
-  transition: background 0.3s ease;
-  z-index: -1; /* Keeps it behind the text */
-}
-
-.btn-color-green:hover::before {
-  background: rgba(0, 0, 0, 0.2); /* Dark overlay */
+  background-color: color-mix(in srgb, forestgreen 80%, black 20%);
+  color: white;
 }
 
 /* ======= Dropdown Menu ======= */
@@ -676,6 +639,7 @@ footer {
   display: block;
   transition: all 250ms;
 }
+
 .dropdown-content a:hover {
   background-color: var(--gray-light-3);
   transition: all 250ms;
@@ -708,31 +672,37 @@ footer {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .narrow-row {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .card-home-hero {
-  padding: 3rem; 
-  background-color: rgba(255, 255, 255, 0.75); 
-  margin-bottom: 5rem; 
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 20px;"
-  border: solid 1px red;
+  border-radius: 20px;
+  "
+ border: solid 1px red;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .home-hero-graphical {
   background-color: rgb(99, 205, 247);
 }
+
 .home-hero-graphical-content {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 3fr 2fr;
 }
+
 .home-hero-graphical-content__text {
-  padding: 4rem 0!important;
+  padding: 4rem 0 !important;
 }
+
 /* ======= Global Form Styles ======= */
 form {
   display: flex;
@@ -855,6 +825,7 @@ textarea {
   background: rgba(0, 0, 0, 0.5);
   z-index: 998;
 }
+
 .overlay.active {
   display: block;
 }
@@ -876,6 +847,13 @@ textarea {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
 }
+.ad-review-dashboard-grid-item__style {
+  background-color: var(--gray-light-3);
+  border-radius: var(--border-radius-md);
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
 .ad-review-dashboard-column {
   border-radius: var(--border-radius-md);
   display: flex;
@@ -885,25 +863,25 @@ textarea {
 }
 .ad-review-dashboard-grid-item__short {
   height: auto;
+  flex-grow: 1;
+  display: grid;
+  align-items: stretch;
 }
+
 .ad-review-dashboard-grid-item__short span {
   color: var(--gray-med);
+  font-size: .8rem;
 }
+
 .ad-review-dashboard-grid-item__full {
   min-height: 200px;
   flex-grow: 1;
   display: grid;
-  align-items: stretch; 
+  align-items: stretch;
   text-align: center;
   justify-content: center;
 }
-.ad-review-dashboard-grid-item__style {
-  background-color: var(--gray-light-3);
-  border-radius: var(--border-radius-md);
-  padding: 1rem 1rem;
-  margin-bottom: 1rem;
-  font-size: .85rem;
-}
+
 .ad-review-card {
   background-color: white;
   padding: 1rem;
@@ -912,17 +890,35 @@ textarea {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 1rem;
 }
+
 .ad-review-card:last-child {
   margin-bottom: 0;
+}
+.ad-review-card p {
+  margin: 0;
+  font-size: inherit;
+}
+
+.ad-review-card__notes {
+  padding-bottom: 1rem;
+}
+.ad-review-card__notes:first-of-type {
+  padding-top: 1rem;
+}
+.ad-review-card__notes p {
+  font-size: .8rem;
+  color: var(--gray-med);
 }
 
 .ad-review-card button {
   width: 100%;
   margin: 1rem 0 0 0;
 }
+
 .ad-review-card button:first-child {
   margin-top: 1rem;
 }
+
 /* ======= Accordian ======= */
 
 .accordion {
@@ -934,6 +930,7 @@ textarea {
 .accordion-item {
   border-bottom: solid 1px var(--gray-light-1);
 }
+
 .accordion-item:last-child {
   border-bottom: none;
 }
@@ -951,21 +948,26 @@ textarea {
   background: none;
   font-size: 1rem;
 }
+
 .accordion-header span {
- font-size: .85rem;
- color: var(--gray-med);
+  font-size: .85rem;
+  color: var(--gray-med);
 }
+
 .accordion-header:hover {
   background-color: none;
 }
+
 .accordion-header i {
   transition: transform 0.3s ease;
   font-size: .85rem;
   color: var(--gray-med);
 }
+
 .accordion-header.active i {
   transform: rotate(90deg);
 }
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -973,8 +975,7 @@ textarea {
   margin-bottom: 2rem;
 }
 
-.accordion-content.open {
-}
+.accordion-content.open {}
 
 /* ======= Fades ======= */
 
@@ -992,24 +993,29 @@ textarea {
   transform: translateX(-50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .fade-in-left.visible {
   opacity: 1;
   transform: translateX(0);
 }
+
 .fade-in-right {
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .fade-in-right.visible {
   opacity: 1;
   transform: translateX(0);
 }
+
 .fade-in-bottom {
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.6s ease-out 0.6s, transform 0.6s ease-out 0.6s;
 }
+
 .fade-in-bottom.visible {
   opacity: 1;
   transform: translateY(0);
