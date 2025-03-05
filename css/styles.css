@@ -145,7 +145,7 @@ hr {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: var(--gray-light-3);
+  background-color: var(--gray-light-2);
 }
 
 .text-align-center {
@@ -253,7 +253,7 @@ header {
 footer {
   width: 100%;
   position: relative;
-  border-top: solid 1px var(--gray-light-3);
+  border-top: solid 1px var(--gray-light-2);
 }
 
 .footer-main {
@@ -329,6 +329,10 @@ footer {
 }
 
 .mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mt-6 {
   margin-top: 4rem !important;
 }
 
@@ -592,7 +596,9 @@ footer {
   color: var(--gray-dark);
 }
 
-.btn-color-red,.btn-color-red:active, .btn-color-red:visited {
+.btn-color-red,
+.btn-color-red:active,
+.btn-color-red:visited {
   position: relative;
   background-color: crimson;
   color: white;
@@ -609,7 +615,9 @@ footer {
   color: white;
 }
 
-.btn-color-green, .btn-color-green:active, .btn-color-green:visited {
+.btn-color-green,
+.btn-color-green:active,
+.btn-color-green:visited {
   position: relative;
   background-color: forestgreen;
   color: white;
@@ -848,6 +856,7 @@ textarea {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
 }
+
 .ad-review-dashboard-grid-item__style {
   background-color: var(--gray-light-3);
   border-radius: var(--border-radius-md);
@@ -855,6 +864,7 @@ textarea {
   margin-bottom: 1rem;
   font-size: .9rem;
 }
+
 .ad-review-dashboard-column {
   border-radius: var(--border-radius-md);
   display: flex;
@@ -862,6 +872,7 @@ textarea {
   height: 100%;
 
 }
+
 .ad-review-dashboard-grid-item__short {
   height: auto;
   flex-grow: 1;
@@ -895,6 +906,7 @@ textarea {
 .ad-review-card:last-child {
   margin-bottom: 0;
 }
+
 .ad-review-card p {
   margin: 0;
   font-size: inherit;
@@ -903,9 +915,11 @@ textarea {
 .ad-review-card__notes {
   padding-bottom: 1rem;
 }
+
 .ad-review-card__notes:first-of-type {
   padding-top: 1rem;
 }
+
 .ad-review-card__notes p {
   font-size: .8rem;
   color: var(--gray-med);
@@ -1024,107 +1038,4 @@ textarea {
 
 
 
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
-/* THE END */
 /* THE END */
