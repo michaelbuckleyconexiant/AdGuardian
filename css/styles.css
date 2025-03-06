@@ -801,6 +801,9 @@ textarea {
   transition: border-color 0;
   color: var(--gray-dark);
 }
+.quill-editor {
+  background-color: white;
+}
 
 /* ======= Drag and Drop ======= */
 
