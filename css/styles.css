@@ -839,6 +839,24 @@ textarea {
   margin-top: 15px;
   font-size: 14px;
 }
+/* ======= Contact Page ======= */
+
+.icon {
+  background-color: var(--gray-dark);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;  border-radius: 100px;
+  text-align: center;
+  margin-right: 1rem;
+}
+.icon__med {
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+}
+
 /* ======= Sidebar styles ======= */
 .sidebar {
   max-width: 430px;
