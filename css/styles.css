@@ -636,6 +636,10 @@ footer {
   color: white;
 }
 
+.btn-full-width {
+  width: 100%;
+}
+
 /* ======= Dropdown Menu ======= */
 
 .dropdown {
