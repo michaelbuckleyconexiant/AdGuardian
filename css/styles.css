@@ -561,6 +561,7 @@ footer {
 .primary-btn:hover {
   background-color: color-mix(in srgb, var(--primary-color-1) 80%, black 20%);
   color: white;
+  text-decoration: none;
 }
 
 .btn-sm {
@@ -684,6 +685,7 @@ footer {
   background-color: var(--gray-light-3);
   padding: 2rem;
   border-radius: var(--border-radius-md);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 .module__white {
   background-color: white;
@@ -732,12 +734,32 @@ form {
   max-width: 100%;
   gap: 10px;
 }
+fieldset {
+  margin-bottom: 3rem;
+}
 
 /*  =======Global Label Styles ======= */
-label {
+label, legend {
   font-size: 16px;
   color: var(--gray-dark);
+  margin-bottom: .5rem;
+  display: inline-block;
 }
+legend {
+  margin-bottom: 1.5rem;
+}
+input[type="checkbox"] {
+  vertical-align: top;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+input[type="checkbox"] + label {
+  display: inline-block; 
+  margin-bottom: 8px;
+  max-width: calc(100% - 40px);
+}
+
+
 
 /* ======= Global Select Styles ======= */
 select {
@@ -751,7 +773,6 @@ select {
   background-color: #fff;
   cursor: pointer;
   padding-right: 40px;
-  /* Space for the Font Awesome arrow */
   position: relative;
 }
 
@@ -781,32 +802,31 @@ textarea {
 
 #drop-area {
   width: 100%;
-  padding: 20px;
-  border: 2px dashed #007bff;
+  padding: 2rem;
+  border: 2px dashed var(--primary-color-1);
   text-align: center;
-  font-family: Arial, sans-serif;
-  color: #007bff;
+  color: var(--primary-color-1);
   cursor: pointer;
   position: relative;
+  border-radius: var(--border-radius-md);
 }
 #drop-area.highlight {
-  border-color: #0056b3;
+  border-color: var(--primary-color-1);
 }
 #file-input {
   display: none;
 }
 #browse-btn {
   margin-top: 10px;
-  padding: 8px 15px;
-  background-color: #007bff;
+  padding: .5rem 1.5rem;
+  background-color: var(--primary-color-1);
   color: white;
   border: none;
   cursor: pointer;
     border-radius: var(--border-radius-md);
-
 }
 #browse-btn:hover {
-  background-color: #0056b3;
+  background-color: color-mix(in srgb, var(--primary-color-1) 80%, black 20%);
 }
 #file-list {
   margin-top: 15px;
