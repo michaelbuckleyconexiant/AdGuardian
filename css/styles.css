@@ -570,6 +570,12 @@ footer {
   padding: .65rem 1rem;
   font-size: .75rem;
 }
+td .btn-sm {
+  margin-bottom: .5rem;
+}
+td .btn-sm:last-child {
+  margin-bottom: 0;
+}
 .btn-color-2 {
   background-color: var(--primary-color-2);
   color: var(--gray-dark);
@@ -751,7 +757,7 @@ label, legend {
   display: inline-block;
 }
 legend {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 input[type="checkbox"] {
   vertical-align: top;

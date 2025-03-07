@@ -93,81 +93,33 @@
       <div class="fluid-container">
          <div class="container">
             <div class="row mt-5 mb-5">
-               <h1>Manage Emails</h1>
-               <hr class="mb-4">
-               <h4>Email Templates</h4>
-               <a href="create-email-template.html" class="primary-btn mb-4 mt-3"><i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add Email Templates</a>
-               <table>
-                  <tbody>
-                     <tr>
-                        <th>Template Name</th>
-                        <th>Is Active</th>
-                        <th>Date Added</th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                     </tr>
-                     <tr>
-                        <td>TemplateName</td>
-                        <td>True</td>
-                        <td>1/1/0001 12:00:00 AM</td>
-                        <td><a href="update-email-template.html" class="primary-btn btn-sm">Update</a></td>
-                        <td><button class="primary-btn btn-color-red btn-sm">Delete</button></td>
-                     </tr>
-                     <tr>
-                        <td>TemplateName</td>
-                        <td>True</td>
-                        <td>1/1/0001 12:00:00 AM</td>
-                        <td><a href="update-email-template.html" class="primary-btn btn-sm">Update</a></td>                       
-                        <td><button class="primary-btn btn-color-red btn-sm">Delete</button></td>
-                     </tr>
-                     <tr>
-                        <td>TemplateName</td>
-                        <td>True</td>
-                        <td>1/1/0001 12:00:00 AM</td>
-                        <td><a href="update-email-template.html" class="primary-btn btn-sm">Update</a></td>
-                        <td><button class="primary-btn btn-color-red btn-sm">Delete</button></td>
-                     </tr>
-                  </tbody>
-               </table>
-               <hr class="mb-4 mt-5">
-               <h4>Email Groups</h4>
-               <a href="create-email-group.html" class="primary-btn mb-4 mt-3"><i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add Email Group</a>
-               <table class="mb-5">
-                  <tbody>
-                     <tr>
-                        <th>Group Name</th>
-                        <th>Is Active</th>
-                        <th>Recipient Count</th>
-                        <th>Date Added</th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                     </tr>
-                     <tr>
-                        <td>GroupName</td>
-                        <td>True</td>
-                        <td>0</td>
-                        <td>1/1/0001 12:00:00 AM</td>
-                        <td><a href="update-email-group.html" class="primary-btn btn-sm">Update</a></td>
-                        <td><button class="primary-btn btn-color-red btn-sm">Delete</button></td>
-                     </tr>
-                     <tr>
-                        <td>GroupName</td>
-                        <td>True</td>
-                        <td>0</td>
-                        <td>1/1/0001 12:00:00 AM</td>
-                        <td><a href="update-email-group.html" class="primary-btn btn-sm">Update</a></td>
-                        <td><button class="primary-btn btn-color-red btn-sm">Delete</button></td>
-                     </tr>
-                     <tr>
-                        <td>GroupName</td>
-                        <td>True</td>
-                        <td>0</td>
-                        <td>1/1/0001 12:00:00 AM</td>
-                        <td><a href="update-email-group.html" class="primary-btn btn-sm">Update</a></td>
-                        <td><button class="primary-btn btn-color-red btn-sm">Delete</button></td>
-                     </tr>
-                  </tbody>
-               </table>
+               <div class="narrow-row">
+                  <h1>Update Backend User</h1><br>
+                  <form action="/">
+                     <label for="username">User Name</label>
+                     <input type="text" id="username" name="username" placeholder="Name">
+                     <br><br>
+                     <label for="email">Email</label>
+                     <input type="email" id="email" name="email" placeholder="Email">
+                     <br><br>
+                     <label for="password">Password <small>(Do not put anything in Password fields if you are not attempting to change the password)</small></label>
+                     <input type="password" id="password" name="password" placeholder="Password">
+                     <br><br>
+                     <label for="confirm-password">Confirm Password</label>
+                     <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password">
+                     <br><br>
+                     <fieldset>
+                        <legend>Role</legend>
+                        <input type="checkbox" id="conexiantreviewer" name="role[]" value="Conexiant Reviewer">
+                        <label for="conexiantreviewer">Conexiant Reviewer</label><br>
+                        <input type="checkbox" id="administrator" name="role[]" value="Administrator">
+                        <label for="administrator">Administrator</label><br>
+                        <input type="checkbox" id="companyreviewer" name="role[]" value="Company Reviewer">
+                        <label for="companyreviewer">[Company Name] Reviewer</label>
+                     </fieldset>
+                     <input class="primary-btn" type="submit" value="Save">
+                  </form>
+               </div>
             </div>
          </div>
       </div>
@@ -184,8 +136,8 @@
       </footer>
       <!-- footer: END -->
       <!-- javascript docs -->
-      <script src="js/accordian.js"></script> 
-      <script src="js/sidebar.js"></script> 
-      <script src="js/login-menu.js"></script> 
+      <script src="js/accordian.js"></script>
+      <script src="js/sidebar.js"></script>
+      <script src="js/login-menu.js"></script>
    </body>
 </html>
