@@ -99,14 +99,14 @@
                   <br>
                   <form action="/">
                      <!-- Template Name Field -->
-                     <label for="groupname"> Group Name</label>
+                     <label for="groupname">Group Name</label>
                      <input type="text" id="groupname" name="groupname" placeholder="Group Name">
                      <br><br>
                      <!-- Role Check Box -->
                      <input type="checkbox" id="administrator" name="role" value="Administrator">
                      <label for="administrator">Is Active</label>
                      <br><br>
-                     <p> Email Recipients<br>
+                     <p>Email Recipients</p>
                      <table>
                         <tbody>
                            <tr>
@@ -131,16 +131,15 @@
                            </tr>
                         </tbody>
                      </table>
-                     </p>
                      <br>
                      <p>Add New Recipient:</p>
-                     <label for="groupname">Name:</label>
-                     <input type="text" id="groupname" name="groupname" placeholder="Group Name">
+                     <label for="recipient-name">Name:</label>
+                     <input type="text" id="recipient-name" name="recipient-name" placeholder="Recipient Name">
                      <br><br>
-                     <label for="groupname">Email Adress:</label>
-                     <input type="text" id="groupname" name="groupname" placeholder="Group Name">
+                     <label for="recipient-email">Email Address:</label>
+                     <input type="email" id="recipient-email" name="recipient-email" placeholder="Recipient Email">
                      <br><br>
-                     <!-- add recipient button -->
+                     <!-- Add recipient button -->
                      <button class="primary-btn btn-color-light btn-sm">Add Recipient</button>
                      <br><br>
                      <hr>
