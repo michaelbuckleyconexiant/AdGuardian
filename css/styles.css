@@ -106,7 +106,7 @@ li {
 small {
 	font-size: 80%;
 	color: var(--gray-dark-med);
-	line-height: 1.5;
+	line-height: 80%;
 }
 
 
@@ -776,8 +776,6 @@ td .btn-sm:last-child {
 	margin-bottom: 5rem;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 	border-radius: 20px;
-	"
- border: solid 1px red;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -809,7 +807,7 @@ fieldset {
 /*  =======Global Label Styles ======= */
 label,
 legend {
-	font-size: 16px;
+	font-size: 1rem;
 	color: var(--gray-dark);
 	margin-bottom: .5rem;
 	display: inline-block;
@@ -836,7 +834,7 @@ input[type="checkbox"]+label {
 select {
 	width: 100%;
 	padding: 10px;
-	font-size: 16px;
+	font-size: 1rem;
 	border: 1px solid var(--gray-light-1);
 	border-radius: 5px;
 	outline: none;
@@ -860,7 +858,7 @@ input[type="password"],
 textarea {
 	width: 100%;
 	padding: 10px;
-	font-size: 16px;
+	font-size: 1rem;
 	border: 1px solid var(--gray-light-1);
 	border-radius: 5px;
 	outline: none;
@@ -1206,9 +1204,16 @@ textarea {
 /* ======= Tablet-Mobile ======= */
 
 
-/* Responsive Table */
+
+
+
 
 @media (max-width: 900px) {
+
+
+
+	/* Responsive Table */
+
 	table {
 		display: block;
 		overflow-x: auto;
@@ -1256,6 +1261,12 @@ textarea {
 		grid-template-columns: repeat(5, 200px);
 		grid-gap: 1rem;
 	}
+	
+	/* home hero */
+
+	.card-home-hero {
+		padding: 2rem;
+	}
 
 	/* Responsive Footer */
 
@@ -1276,5 +1287,16 @@ textarea {
 
 }
 
+
+/* ======= Phone-Mobile ======= */
+
+
+@media (max-width: 900px) {
+
+html {
+	font-size: 14px;
+}
+
+}
 
 /* THE END */
