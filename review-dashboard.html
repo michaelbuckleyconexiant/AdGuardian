@@ -1,321 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Ad Workflow Platform</title>
-      <!-- Primary CSS -->
-      <link rel="stylesheet" href="css/reset.css">
-      <link rel="stylesheet" href="css/styles.css">
-      <!-- Icons for UI elements -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-      <!-- Quill Form CSS -->
-      <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-   </head>
-   <body>
-      <!-- header : START -->
-      <div id="header"></div>
-      <script>
-         fetch("components/header.html")
-             .then(response => response.text())
-             .then(data => document.getElementById("header").innerHTML = data);
-      </script>
-      <!-- header : END -->      
-      <!-- full-width contnet : START  -->
-      <div class="fluid-container">
-         <div class="container">
-            <div class="row mt-5 mb-5">
-               <div class="ad-review-dashboard text-align-center">
-                  <h1 class="mb-5">[Name] Advertising Review Dashboard</h1>
-                  <div class="mb-3"><a href="ad-submission-form.html" class="primary-btn mr-3 mb-2"><i class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add New
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Ad Workflow Platform</title>
+   <!-- Primary CSS -->
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/styles.css">
+   <!-- Icons for UI elements -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <!-- Quill Form CSS -->
+   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- header : START -->
+   <div id="header"></div>
+   <script>
+      fetch("components/header.html")
+         .then(response => response.text())
+         .then(data => document.getElementById("header").innerHTML = data);
+   </script>
+   <!-- header : END -->
+   <!-- full-width contnet : START  -->
+   <div class="fluid-container">
+      <div class="container">
+         <div class="row mt-5 mb-5">
+            <div class="ad-review-dashboard text-align-center">
+               <h1 class="mb-5">[Name] Advertising Review Dashboard</h1>
+               <div class="mb-3"><a href="ad-submission-form.html" class="primary-btn mr-3 mb-2"><i
+                        class="fa-solid fa-square-plus"></i>&nbsp;&nbsp;Add New
                      Campaign</a> <a href="archived-campaigns.html" class="primary-btn btn-color-light mb-2"><i
                         class="fa-solid fa-box-archive"></i>&nbsp;&nbsp;View Archived
                      Campaignes</a>
-                  </div>
-                  <p>Below are the current status of recent submissions.</p>
-                  <form action="/" class="align-center mb-5 mt-4">
-                     <div class="align-center" style="width: 250px;">
-                        <select>
-                           <option value="">Select Group</option>
-                           <option value="1">Option 1</option>
-                           <option value="2">Option 2</option>
-                           <option value="3">Option 3</option>
-                        </select>
-                     </div>
-                  </form>
-                  <!-- ad review dashboard : BEGIN -->
-                  <div class="ad-review-dashboard-container">
-                     <!-- column labels : BEGIN -->
-                     <div class="ad-review-dashboard-grid">
-                        <!-- column 1 -->
-                        <div class="ad-review-dashboard-column">
-                           <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Agency
-                              Feedback<br><span>0 items</span>
-                           </div>
-                        </div>
-                        <!-- column 2 -->
-                        <div class="ad-review-dashboard-column">
-                           <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Conexiant Reviewing<br><span>0 items</span></div>
-                        </div>
-                        <!-- column 3 -->
-                        <div class="ad-review-dashboard-column">
-                           <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">[Company Name] Reviewing<br><span>0 items</span></div>
-                        </div>
-                        <!-- column 4 -->
-                        <div class="ad-review-dashboard-column">
-                           <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Ready to Deploy<br><span>0 items</span></div>
-                        </div>
-                        <!-- column 5 -->
-                        <div class="ad-review-dashboard-column">
-                           <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Deployed<br><span>0 items</span></div>
-                        </div>
-                     </div>
-                     <!-- column labels : END -->
-                     <!-- accordian : BEGIN -->
-                     <div class="accordion">
-                        <!-- accordian item -->
-                        <div class="accordion-item">
-                           <button class="accordion-header">
-                           <i class="fas fa-chevron-right"></i>Section 1 <span>X items</span>
-                           </button>
-                           <div class="accordion-content">
-                              <div class="ad-review-dashboard-grid">
-                                 <!-- column 1 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
-                                       <!-- card -->
-                                       <div class="ad-review-card">
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
-                                             <p>Approved by: X</p>
-                                          </div>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>Run Dates:</strong></p>
-                                             <p>XX/XX/XXXX - XX/XX/XXXX</p>
-                                          </div>
-                                          <button class="primary-btn btn-sm btn-color-green">Approve</button>
-                                          <button class="primary-btn btn-sm btn-color-red" id="rejectBtn">Reject</button>
-                                          <button class="primary-btn btn-sm">Deploy</button>
-                                          <!-- Lightbox -->
-                                          <div class="lightbox-overlay" id="lightbox">
-                                             <div class="lightbox-content">
-                                                <span class="lightbox__close-btn" id="closeLightbox">&times;</span>
-                                                <h3>Reject Campaign</h3>
-                                                <!-- WYSIWYG Editor -->
-                                                <form>
-                                                   <label for="editor1">Rejection Reason/Comments:</label>
-                                                   <div id="editor1" class="quill-editor" style="height: 200px;"></div>
-                                                   <button class="primary-btn btn-color-red">Reject Campaign</button>
-
-                                                   <script>
-                                                      document.addEventListener("DOMContentLoaded", function () {
-                                                        let quill1 = new Quill('#editor1', { theme: 'snow' });
-                                                      });
-                                                   </script>
-
-                                                </form>
-                                             </div>
-                                          </div>
-                                          <hr class="mt-3 mb-3">
-                                          <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View Details</a>
-                                       </div>
-                                       <!-- card -->
-                                       <div class="ad-review-card">
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
-                                             <p>Approved by: X</p>
-                                          </div>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>Run Dates:</strong></p>
-                                             <p>XX/XX/XXXX - XX/XX/XXXX</p>
-                                          </div>
-                                          <button class="primary-btn btn-sm btn-color-green">Approve</button>
-                                          <button class="primary-btn btn-sm btn-color-red">Reject</button>
-                                          <button class="primary-btn btn-sm">Deploy</button>
-                                          <hr class="mt-3 mb-3">
-                                          <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View Details</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <!-- column 2 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 3 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 4 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 5 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- accordian item -->
-                        <!-- accordian item -->
-                        <div class="accordion-item">
-                           <button class="accordion-header">
-                           <i class="fas fa-chevron-right"></i> Section 1 <span>X items</span>
-                           </button>
-                           <div class="accordion-content">
-                              <div class="ad-review-dashboard-grid">
-                                 <!-- column 1 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
-                                       <!-- card -->
-                                       <div class="ad-review-card">
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
-                                             <p>Approved by: X</p>
-                                          </div>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>Run Dates:</strong></p>
-                                             <p>XX/XX/XXXX - XX/XX/XXXX</p>
-                                          </div>
-                                          <button class="primary-btn btn-sm btn-color-green">Approve</button>
-                                          <button class="primary-btn btn-sm btn-color-red">Reject</button>
-                                          <button class="primary-btn btn-sm">Deploy</button>
-                                          <hr class="mt-3 mb-3">
-                                          <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View Details</a>
-                                       </div>
-                                       <!-- card -->
-                                    </div>
-                                 </div>
-                                 <!-- column 2 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 3 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 4 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 5 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- accordian item -->
-                        <!-- accordian item -->
-                        <div class="accordion-item">
-                           <button class="accordion-header">
-                           <i class="fas fa-chevron-right"></i> Section 1 <span>X items</span>
-                           </button>
-                           <div class="accordion-content">
-                              <div class="ad-review-dashboard-grid">
-                                 <!-- column 1 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
-                                       <!-- card -->
-                                       <div class="ad-review-card">
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <p>Group Title</p>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
-                                             <p>Approved by: X</p>
-                                          </div>
-                                          <div class="ad-review-card__notes">
-                                             <p><strong>Run Dates:</strong></p>
-                                             <p>XX/XX/XXXX - XX/XX/XXXX</p>
-                                          </div>
-                                          <button class="primary-btn btn-sm btn-color-green">Approve</button>
-                                          <button class="primary-btn btn-sm btn-color-red">Reject</button>
-                                          <button class="primary-btn btn-sm">Deploy</button>
-                                          <hr class="mt-3 mb-3">
-                                          <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View Details</a>
-                                       </div>
-                                       <!-- card -->
-                                    </div>
-                                 </div>
-                                 <!-- column 2 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 3 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 4 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                                 <!-- column 5 -->
-                                 <div class="ad-review-dashboard-column">
-                                    <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">No cards to
-                                       display
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- accoridian items end -->
-                     </div>
-                     <!-- accordian : END -->
-                  </div>
-                  <!-- ad review dashboard : END -->
                </div>
+               <p>Below are the current status of recent submissions.</p>
+               <form action="/" class="align-center mb-5 mt-4">
+                  <div class="align-center" style="width: 250px;">
+                     <select>
+                        <option value="">Select Group</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                     </select>
+                  </div>
+               </form>
+               <!-- ad review dashboard : BEGIN -->
+               <div class="ad-review-dashboard-container">
+                  <!-- column labels : BEGIN -->
+                  <div class="ad-review-dashboard-grid">
+                     <!-- column 1 -->
+                     <div class="ad-review-dashboard-column">
+                        <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Agency
+                           Feedback<br><span>0 items</span>
+                        </div>
+                     </div>
+                     <!-- column 2 -->
+                     <div class="ad-review-dashboard-column">
+                        <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Conexiant
+                           Reviewing<br><span>0 items</span></div>
+                     </div>
+                     <!-- column 3 -->
+                     <div class="ad-review-dashboard-column">
+                        <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">[Company
+                           Name] Reviewing<br><span>0 items</span></div>
+                     </div>
+                     <!-- column 4 -->
+                     <div class="ad-review-dashboard-column">
+                        <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">Ready to
+                           Deploy<br><span>0 items</span></div>
+                     </div>
+                     <!-- column 5 -->
+                     <div class="ad-review-dashboard-column">
+                        <div class="ad-review-dashboard-grid-item__short ad-review-dashboard-grid-item__style">
+                           Deployed<br><span>0 items</span></div>
+                     </div>
+                  </div>
+                  <!-- column labels : END -->
+                  <!-- accordian : BEGIN -->
+                  <div class="accordion">
+                     <!-- accordian item -->
+                     <div class="accordion-item">
+                        <button class="accordion-header">
+                           <i class="fas fa-chevron-right"></i>Section 1 <span>X items</span>
+                        </button>
+                        <div class="accordion-content">
+                           <div class="ad-review-dashboard-grid">
+                              <!-- column 1 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    <!-- card -->
+                                    <div class="ad-review-card">
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
+                                          <p>Approved by: X</p>
+                                       </div>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>Run Dates:</strong></p>
+                                          <p>XX/XX/XXXX - XX/XX/XXXX</p>
+                                       </div>
+                                       <button class="primary-btn btn-sm btn-color-green">Approve</button>
+                                       <button class="primary-btn btn-sm btn-color-red" id="rejectBtn">Reject</button>
+                                       <button class="primary-btn btn-sm">Deploy</button>
+                                       <!-- Lightbox -->
+                                       <div class="lightbox-overlay" id="lightbox">
+                                          <div class="lightbox-content">
+                                             <span class="lightbox__close-btn" id="closeLightbox">&times;</span>
+                                             <h3>Reject Campaign</h3>
+                                             <!-- WYSIWYG Editor -->
+                                             <form>
+                                                <label for="editor1">Rejection Reason/Comments:</label>
+                                                <div id="editor1" class="quill-editor" style="height: 200px;"></div>
+                                                <button class="primary-btn btn-color-red">Reject Campaign</button>
+
+                                                <script>
+                                                   document.addEventListener("DOMContentLoaded", function () {
+                                                      let quill1 = new Quill('#editor1', { theme: 'snow' });
+                                                   });
+                                                </script>
+
+                                             </form>
+                                          </div>
+                                       </div>
+                                       <hr class="mt-3 mb-3">
+                                       <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View
+                                          Details</a>
+                                    </div>
+                                    <!-- card -->
+                                    <div class="ad-review-card">
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
+                                          <p>Approved by: X</p>
+                                       </div>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>Run Dates:</strong></p>
+                                          <p>XX/XX/XXXX - XX/XX/XXXX</p>
+                                       </div>
+                                       <button class="primary-btn btn-sm btn-color-green">Approve</button>
+                                       <button class="primary-btn btn-sm btn-color-red">Reject</button>
+                                       <button class="primary-btn btn-sm">Deploy</button>
+                                       <hr class="mt-3 mb-3">
+                                       <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View
+                                          Details</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- column 2 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 3 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 4 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 5 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- accordian item -->
+                     <!-- accordian item -->
+                     <div class="accordion-item">
+                        <button class="accordion-header">
+                           <i class="fas fa-chevron-right"></i> Section 1 <span>X items</span>
+                        </button>
+                        <div class="accordion-content">
+                           <div class="ad-review-dashboard-grid">
+                              <!-- column 1 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    <!-- card -->
+                                    <div class="ad-review-card">
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
+                                          <p>Approved by: X</p>
+                                       </div>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>Run Dates:</strong></p>
+                                          <p>XX/XX/XXXX - XX/XX/XXXX</p>
+                                       </div>
+                                       <button class="primary-btn btn-sm btn-color-green">Approve</button>
+                                       <button class="primary-btn btn-sm btn-color-red">Reject</button>
+                                       <button class="primary-btn btn-sm">Deploy</button>
+                                       <hr class="mt-3 mb-3">
+                                       <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View
+                                          Details</a>
+                                    </div>
+                                    <!-- card -->
+                                 </div>
+                              </div>
+                              <!-- column 2 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 3 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 4 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 5 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- accordian item -->
+                     <!-- accordian item -->
+                     <div class="accordion-item">
+                        <button class="accordion-header">
+                           <i class="fas fa-chevron-right"></i> Section 1 <span>X items</span>
+                        </button>
+                        <div class="accordion-content">
+                           <div class="ad-review-dashboard-grid">
+                              <!-- column 1 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    <!-- card -->
+                                    <div class="ad-review-card">
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <p>Group Title</p>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>XX/XX/XXXX X:XX PM:</strong></p>
+                                          <p>Approved by: X</p>
+                                       </div>
+                                       <div class="ad-review-card__notes">
+                                          <p><strong>Run Dates:</strong></p>
+                                          <p>XX/XX/XXXX - XX/XX/XXXX</p>
+                                       </div>
+                                       <button class="primary-btn btn-sm btn-color-green">Approve</button>
+                                       <button class="primary-btn btn-sm btn-color-red">Reject</button>
+                                       <button class="primary-btn btn-sm">Deploy</button>
+                                       <hr class="mt-3 mb-3">
+                                       <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View
+                                          Details</a>
+                                    </div>
+                                    <!-- card -->
+                                 </div>
+                              </div>
+                              <!-- column 2 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 3 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 4 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                              <!-- column 5 -->
+                              <div class="ad-review-dashboard-column">
+                                 <div class="ad-review-dashboard-grid-item__full ad-review-dashboard-grid-item__style">
+                                    No cards to
+                                    display
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- accoridian items end -->
+                  </div>
+                  <!-- accordian : END -->
+               </div>
+               <!-- ad review dashboard : END -->
             </div>
          </div>
       </div>
-      <!-- full-width contnet : END  -->
-      <!-- footer : START -->
-      <div id="footer"></div>
-      <script>
-         fetch("components/footer.html")
-             .then(response => response.text())
-             .then(data => document.getElementById("footer").innerHTML = data);
-      </script>
-      <!-- footer : END -->
+   </div>
+   <!-- full-width contnet : END  -->
+   <!-- footer : START -->
+   <div id="footer"></div>
+   <script>
+      fetch("components/footer.html")
+         .then(response => response.text())
+         .then(data => document.getElementById("footer").innerHTML = data);
+   </script>
+   <!-- footer : END -->
 
-      <!-- javascript docs -->
-      <script src="js/accordian.js"></script> 
-      <script src="js/sidebar.js"></script> 
-      <script src="js/login-menu.js"></script> 
-      <script src="js/lightbox.js"></script> 
-      <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+   <!-- javascript docs -->
+   <script src="js/accordian.js"></script>
+   <script src="js/sidebar.js"></script>
+   <script src="js/login-menu.js"></script>
+   <script src="js/lightbox.js"></script>
+   <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
-   </body>
+</body>
+
 </html>

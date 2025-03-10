@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Ad Workflow Platform</title>
-      <!-- primary css -->
-      <link rel="stylesheet" href="css/reset.css">
-      <link rel="stylesheet" href="css/styles.css">
-      <!-- icons for ui elements -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-            <!-- Quill Form CSS -->
-            <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-   </head>
-   <body>
-      <!-- header : START -->
-      <div id="header"></div>
-      <script>
-         fetch("components/header.html")
-             .then(response => response.text())
-             .then(data => document.getElementById("header").innerHTML = data);
-      </script>
-      <!-- header : END -->
-      <!-- full-width contnet : START  -->
-      <div class="fluid-container bg-radial-color-gradients pt-5 pb-5">
-         <div class="container">
-            <div class="home-hero">
-               <div class="row">
-                  <h1 class="text-align-center">Advertising Asset Submission Form</h1>
-                  <p style="text-wrap: balance;" class="text-align-center mb-4">Submit new advertising campaign assets for
-                     review and approval while ensuring compliance with our guidelines.
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Ad Workflow Platform</title>
+   <!-- primary css -->
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/styles.css">
+   <!-- icons for ui elements -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <!-- Quill Form CSS -->
+   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- header : START -->
+   <div id="header"></div>
+   <script>
+      fetch("components/header.html")
+         .then(response => response.text())
+         .then(data => document.getElementById("header").innerHTML = data);
+   </script>
+   <!-- header : END -->
+   <!-- full-width contnet : START  -->
+   <div class="fluid-container bg-radial-color-gradients pt-5 pb-5">
+      <div class="container">
+         <div class="home-hero">
+            <div class="row">
+               <h1 class="text-align-center">Advertising Asset Submission Form</h1>
+               <p style="text-wrap: balance;" class="text-align-center mb-4">Submit new advertising campaign assets for
+                  review and approval while ensuring compliance with our guidelines.
+               </p>
+               <div class="card-home-hero text-align-center">
+                  <p>Before submitting, review the <a href="#" target="_blank">[Company Name]</a> Advertising Standards
+                     to
+                     ensure your campaign meets all requirements. If assets do not meet guidelines, approval times may
+                     be
+                     delayed.
                   </p>
-                  <div class="card-home-hero text-align-center">
-                     <p>Before submitting, review the <a href="#" target="_blank">[Company Name]</a> Advertising Standards to
-                        ensure your campaign meets all requirements. If assets do not meet guidelines, approval times may be
-                        delayed.
+                  <p class="text-align-center"><strong>Enter your approved email address</strong></p>
+                  <form class="mt-2 mb-2 text text-align-center align-center">
+                     <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                     <p>
+                        <button class="primary-btn mt-3" type="submit">Continue</button>
                      </p>
-                     <p class="text-align-center"><strong>Enter your approved email address</strong></p>
-                     <form class="mt-2 mb-2 text text-align-center align-center">
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                        <p>
-                           <button class="primary-btn mt-3" type="submit">Continue</button>
-                        </p>
-                     </form>
-                     <small>Only Conexiant-approved email addresses can proceed.<br>
+                  </form>
+                  <small>Only Conexiant-approved email addresses can proceed.<br>
                      Need help? Contact <a href="#">adaloginhelp@hbside.com</a></small>
-                  </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- full-width contnet : END  -->
-      <!-- footer : START -->
-      <div id="footer"></div>
-      <script>
-         fetch("components/footer.html")
-             .then(response => response.text())
-             .then(data => document.getElementById("footer").innerHTML = data);
-      </script>
-      <!-- footer : END -->
-      <!-- javascript docs -->
-      <script src="js/accordian.js"></script> 
-      <script src="js/sidebar.js"></script> 
-      <script src="js/login-menu.js"></script> 
-      <script src="js/lightbox.js"></script> 
-      <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+   </div>
+   <!-- full-width contnet : END  -->
+   <!-- footer : START -->
+   <div id="footer"></div>
+   <script>
+      fetch("components/footer.html")
+         .then(response => response.text())
+         .then(data => document.getElementById("footer").innerHTML = data);
+   </script>
+   <!-- footer : END -->
+   <!-- javascript docs -->
+   <script src="js/accordian.js"></script>
+   <script src="js/sidebar.js"></script>
+   <script src="js/login-menu.js"></script>
+   <script src="js/lightbox.js"></script>
+   <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
-   </body>
+</body>
+
 </html>
