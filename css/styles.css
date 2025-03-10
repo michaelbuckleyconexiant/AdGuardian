@@ -720,7 +720,8 @@ td .btn-sm:last-child {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 	text-align: center;
 	position: relative;
-	max-width: 800px;
+	max-width: 500px;
+	width: 100%;
 }
 
 .lightbox__close-btn {
