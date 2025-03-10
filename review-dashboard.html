@@ -10,6 +10,8 @@
       <!-- Icons for UI elements -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <!-- Quill Form CSS -->
+      <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
    </head>
    <body>
       <!-- header : START -->
@@ -30,7 +32,7 @@
                      Campaign</a> <a href="archived-campaigns.html" class="primary-btn btn-color-light mb-2"><i
                         class="fa-solid fa-box-archive"></i>&nbsp;&nbsp;View Archived
                      Campaignes</a>
-                     </div>
+                  </div>
                   <p>Below are the current status of recent submissions.</p>
                   <form action="/" class="align-center mb-5 mt-4">
                      <div class="align-center" style="width: 250px;">
@@ -96,8 +98,28 @@
                                              <p>XX/XX/XXXX - XX/XX/XXXX</p>
                                           </div>
                                           <button class="primary-btn btn-sm btn-color-green">Approve</button>
-                                          <button class="primary-btn btn-sm btn-color-red">Reject</button>
+                                          <button class="primary-btn btn-sm btn-color-red" id="rejectBtn">Reject</button>
                                           <button class="primary-btn btn-sm">Deploy</button>
+                                          <!-- Lightbox -->
+                                          <div class="lightbox-overlay" id="lightbox">
+                                             <div class="lightbox-content">
+                                                <span class="lightbox__close-btn" id="closeLightbox">&times;</span>
+                                                <h3>Reject Campaign</h3>
+                                                <!-- WYSIWYG Editor -->
+                                                <form>
+                                                   <label for="editor1">Rejection Reason/Comments:</label>
+                                                   <div id="editor1" class="quill-editor" style="height: 200px;"></div>
+                                                   <button class="primary-btn btn-color-red">Reject Campaign</button>
+
+                                                   <script>
+                                                      document.addEventListener("DOMContentLoaded", function () {
+                                                        let quill1 = new Quill('#editor1', { theme: 'snow' });
+                                                      });
+                                                   </script>
+
+                                                </form>
+                                             </div>
+                                          </div>
                                           <hr class="mt-3 mb-3">
                                           <a href="ad-review.html" class="primary-btn btn-sm btn-color-light">View Details</a>
                                        </div>
@@ -287,9 +309,16 @@
              .then(data => document.getElementById("footer").innerHTML = data);
       </script>
       <!-- footer : END -->
+
+
+
+
       <!-- javascript docs -->
       <script src="js/accordian.js"></script> 
       <script src="js/sidebar.js"></script> 
       <script src="js/login-menu.js"></script> 
+      <script src="js/lightbox.js"></script> 
+      <!-- Quill Form JS -->
+      <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
    </body>
 </html>
