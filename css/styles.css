@@ -1053,7 +1053,7 @@ textarea {
 .ad-review-dashboard-grid-item__full {
 	min-height: 200px;
 	flex-grow: 1;
-	display: grid;
+	/* display: grid; */
 	align-items: stretch;
 	text-align: center;
 	justify-content: center;
